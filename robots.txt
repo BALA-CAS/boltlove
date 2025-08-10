@@ -1,0 +1,68 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://covaiaccountingservices.in/sitemap.xml
+
+# Important pages for crawling
+Allow: /about
+Allow: /services
+Allow: /contact
+Allow: /gst-registration
+Allow: /gst-returns
+Allow: /gst-notices
+Allow: /gst-refunds
+Allow: /income-tax
+Allow: /company-registration
+Allow: /pf-esi
+Allow: /tds-tcs
+Allow: /accounting-bookkeeping
+
+# Disallow admin or private areas (if any)
+Disallow: /admin/
+Disallow: /private/
+
+# Crawl delay (optional)
+Crawl-delay: 1
+
+# User-agent specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Business Information for SEO Context
+# Business: Covai Accounting Services
+# Location: Coimbatore, Tamil Nadu, India
+# Services: Premier Tax Consultant, GST Registration, Income Tax Filing
+# Phone: +91 9095723458
+# Email: admin@covaiaccountingservices.in
+# Reviews: 4.9★ Google Reviews from 500+ satisfied clients
+# Established: 2012
+# Address: 352/4, Maruthamalai Main Road, Mullai Nagar, Coimbatore - 641041
+
+# Priority Service Pages
+# GST Registration Services in Coimbatore
+# Income Tax Filing Services in Coimbatore  
+# Company Registration Services in Coimbatore
+# Professional Accounting and Bookkeeping Services
+# PF ESI Registration and Compliance Services
+# TDS TCS Return Filing Services
+# GST Returns Filing and Compliance
+# GST Notice Reply and Appeals Services
+# GST Refund Processing Services
+
+# Local SEO Keywords
+# Tax Consultant Coimbatore
+# GST Registration Coimbatore
+# Income Tax Filing Coimbatore
+# Company Registration Coimbatore
+# Chartered Accountant Coimbatore
+# CA Services Coimbatore
+# Accounting Services Coimbatore
+# Tax Advisor Coimbatore
+# GST Consultant Coimbatore
+# Professional Tax Services Tamil Nadu

@@ -1,0 +1,79 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+[functions]
+  directory = "netlify/functions"
+
+# Custom headers for better SEO and performance
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Redirect rules for SEO and 404 prevention
+[[redirects]]
+  from = "/services/*"
+  to = "/services/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/services/:city/:service"
+  to = "/services/:city/:service"
+  status = 200
+
+[[redirects]]
+  from = "/:service-:city"
+  to = "/services/:city/:service"
+  status = 301
+
+[[redirects]]
+  from = "/services/:city/*"
+  to = "/services/:city/:splat"
+  status = 200
+
+# Handle legacy service URLs
+[[redirects]]
+  from = "/gst-registration"
+  to = "/gst-registration-coimbatore"
+  status = 301
+
+[[redirects]]
+  from = "/income-tax"
+  to = "/income-tax-filing-coimbatore"
+  status = 301
+
+[[redirects]]
+  from = "/company-registration"
+  to = "/company-registration-coimbatore"
+  status = 301
+
+# Handle missing city pages
+[[redirects]]
+  from = "/tax-consultant"
+  to = "/tax-consultant-coimbatore"
+  status = 301
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
